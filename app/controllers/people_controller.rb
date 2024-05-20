@@ -21,7 +21,7 @@ class PeopleController < ApplicationController
     the_person = Person.new
     the_person.first_name = params.fetch("query_first_name")
     the_person.last_name = params.fetch("query_last_name")
-    the_person.address = params.fetch("query_address")
+    the_person.nickname = params.fetch("query_nickname")
     the_person.dob = params.fetch("query_dob")
     the_person.person_notes = params.fetch("query_person_notes")
     the_person.primary_relationship_id = params.fetch("query_primary_relationship_id")
@@ -41,7 +41,7 @@ class PeopleController < ApplicationController
 
     the_person.first_name = params.fetch("query_first_name")
     the_person.last_name = params.fetch("query_last_name")
-    the_person.address = params.fetch("query_address")
+    the_person.nickname = params.fetch("query_nickname")
     the_person.dob = params.fetch("query_dob")
     the_person.person_notes = params.fetch("query_person_notes")
     the_person.primary_relationship_id = params.fetch("query_primary_relationship_id")

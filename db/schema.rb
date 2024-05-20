@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_05_20_012418) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_20_015757) do
   create_table "notes", force: :cascade do |t|
     t.integer "person_id"
     t.text "body"
@@ -21,7 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_20_012418) do
   create_table "people", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "address"
+    t.string "nickname"
     t.date "dob"
     t.text "person_notes"
     t.integer "primary_relationship_id"

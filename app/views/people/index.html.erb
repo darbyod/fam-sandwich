@@ -32,11 +32,11 @@
       </div>
 
       <div>
-        <label for="address_box">
-          Address
+        <label for="nickname_box">
+          Nickname
         </label>
 
-        <input type="text" id="address_box" name="query_address">
+        <input type="text" id="nickname_box" name="query_nickname">
       </div>
 
       <div>
@@ -96,7 +96,7 @@
         </th>
 
         <th>
-          Address
+          Nickname
         </th>
 
         <th>
@@ -108,23 +108,13 @@
         </th>
 
         <th>
-          Primary relationship
+          Relationship
         </th>
 
-        <th>
-          User email
-        </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
 
         <th>
         </th>
+
       </tr>
 
       <% @list_of_people.each do |a_person| %>
@@ -142,7 +132,7 @@
         </td>
 
         <td>
-          <%= a_person.address %>
+          <%= a_person.nickname %>
         </td>
 
         <td>
@@ -155,17 +145,6 @@
 
         <td>
           <%= a_person.primary_relationship_id %>
-        </td>
-
-        <td>
-          <%= a_person.user_email %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_person.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_person.updated_at) %> ago
         </td>
 
         <td>

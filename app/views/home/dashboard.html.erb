@@ -1,0 +1,11 @@
+<h1>Fam HQ</h1>
+
+<ul>
+
+ <% @list_of_people.each do |a_person| %>
+    <li>
+      <%= a_person.first_name %>: <%= a_person.dob.strftime("%B %d") %>
+    </li>
+  <% end %>
+
+</ul>
