@@ -1,9 +1,19 @@
-<h1>Fam HQ</h1>
+<h1>Darby HQ</h1>
 
 <hr>
 
 <h2>Birthdays</h2>
 
+<form>
+  <label for="timeframe">Show upcoming:</label>
+  <select id="timeframe" name="timeframe">
+    <option value="1month">1 Month</option>
+    <option value="3months">3 Months</option>
+    <option value="6months">6 Months</option>
+    <option value="all">All</option>
+  </select>
+</form>
+<br>
 <table>
 
  <% @list_of_people.each do |a_person| 
@@ -30,3 +40,5 @@
 </table>
 
 <hr>
+
+<h2>Events</h2>

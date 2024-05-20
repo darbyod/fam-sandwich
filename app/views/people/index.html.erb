@@ -81,11 +81,9 @@
 <hr>
 <div>
   <div>
-    <table border="1">
+    <table border="1"; width="50%">
       <tr>
-        <th>
-          ID
-        </th>
+
 
         <th>
           First name
@@ -111,20 +109,16 @@
           Relationship
         </th>
 
-
-        <th>
-        </th>
-
       </tr>
 
       <% @list_of_people.each do |a_person| %>
       <tr>
-        <td>
-          <%= a_person.id %>
-        </td>
+
 
         <td>
-          <%= a_person.first_name %>
+          <a href="/people/<%= a_person.id %>">
+             <%= a_person.first_name %>
+          </a>
         </td>
 
         <td>
@@ -147,11 +141,6 @@
           <%= a_person.primary_relationship_id %>
         </td>
 
-        <td>
-          <a href="/people/<%= a_person.id %>">
-            Show details
-          </a>
-        </td>
       </tr>
       <% end %>
     </table>
