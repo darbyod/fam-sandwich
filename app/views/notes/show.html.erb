@@ -1,0 +1,86 @@
+<div>
+  <div>
+    <h1>
+      Note #<%= @the_note.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/notes">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_note/<%= @the_note.id %>">
+          Delete note
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Person
+      </dt>
+      <dd>
+        <%= @the_note.person_id %>
+      </dd>
+
+      <dt>
+        Body
+      </dt>
+      <dd>
+        <%= @the_note.body %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_note.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_note.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit note
+    </h2>
+
+    <form action="/modify_note/<%= @the_note.id %>"  method="post" >
+      <div>
+        <label for="person_id_box">
+          Person
+        </label>
+
+        <input type="text" id="person_id_box" name="query_person_id" value="<%= @the_note.person_id %>">
+      </div>
+
+      <div>
+        <label for="body_box">
+          Body
+        </label>
+
+        <textarea id="body_box" name="query_body"><%= @the_note.body %></textarea>
+      </div>
+
+      <button>
+        Update note
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>
