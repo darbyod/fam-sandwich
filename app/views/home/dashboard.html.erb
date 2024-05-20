@@ -1,11 +1,32 @@
 <h1>Fam HQ</h1>
 
-<ul>
+<hr>
 
- <% @list_of_people.each do |a_person| %>
-    <li>
-      <%= a_person.first_name %>: <%= a_person.dob.strftime("%B %d") %>
-    </li>
+<h2>Birthdays</h2>
+
+<table>
+
+ <% @list_of_people.each do |a_person| 
+    if a_person.nickname == ""
+        result = a_person.first_name
+      else
+       result = a_person.nickname
+      end
+  %>
+   
+  <tr>
+    <td>
+      <%= result %> 
+    </td>
+  
+    <td>
+      <%= a_person.dob.strftime("%B %d") %>
+    </td>
+  
+  
+  </tr>
   <% end %>
 
-</ul>
+</table>
+
+<hr>
